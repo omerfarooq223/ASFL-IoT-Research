@@ -1,0 +1,25 @@
+result,source,metric,condition,value
+Trust admission,trust_summary,fnr_mean,"cv=0.5, method=static",1.0
+Trust admission,trust_summary,fpr_mean,"cv=0.5, method=static",0.00205
+Trust admission,trust_summary,fnr_mean,"cv=0.5, method=datt",0.004399999999999999
+Trust admission,trust_summary,fpr_mean,"cv=0.5, method=datt",0.042749999999999996
+Packet loss,async_summary,accuracy_mean,"packet_loss=0.4, method=sync_blocking",0.4728888888888888
+Packet loss,async_summary,macro_f1_mean,"packet_loss=0.4, method=sync_blocking",0.4162903879454579
+Packet loss,async_summary,accuracy_mean,"packet_loss=0.4, method=asyncflp",0.9235555555555555
+Packet loss,async_summary,macro_f1_mean,"packet_loss=0.4, method=asyncflp",0.9226353420664128
+Byzantine,byzantine_summary,accuracy_mean,"byz_frac=0.3, method=no_defense_sign_flip",0.09866666666666665
+Byzantine,byzantine_summary,macro_f1_mean,"byz_frac=0.3, method=no_defense_sign_flip",0.01796068775891558
+Byzantine,byzantine_summary,accuracy_mean,"byz_frac=0.3, method=brae_sign_flip",0.8960000000000001
+Byzantine,byzantine_summary,macro_f1_mean,"byz_frac=0.3, method=brae_sign_flip",0.8894036321732586
+Privacy,privacy_summary,accuracy_mean,method=fixed_dp,0.9342222222222223
+Privacy,privacy_summary,macro_f1_mean,method=fixed_dp,0.9341783853434489
+Privacy,privacy_summary,accuracy_mean,method=sadp,0.932
+Privacy,privacy_summary,macro_f1_mean,method=sadp,0.932028302297091
+Personalization,pfl_summary,mean_client_accuracy_mean,"alpha=0.1, method=fedavg",0.9261911614683292
+Personalization,pfl_summary,worst_client_accuracy_mean,"alpha=0.1, method=fedavg",0.7513800620183599
+Personalization,pfl_summary,mean_client_accuracy_mean,"alpha=0.1, method=pfl",0.9663157954225602
+Personalization,pfl_summary,worst_client_accuracy_mean,"alpha=0.1, method=pfl",0.8828449328449329
+Synthetic IoT,iot_summary,accuracy_mean,method=fedavg,0.9328
+Synthetic IoT,iot_summary,macro_f1_mean,method=fedavg,0.24130779748290992
+Synthetic IoT,iot_summary,accuracy_mean,method=full_asfl,0.9532
+Synthetic IoT,iot_summary,macro_f1_mean,method=full_asfl,0.5511833204975453

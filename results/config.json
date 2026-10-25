@@ -1,0 +1,29 @@
+{
+  "seeds": [
+    1,
+    7,
+    21,
+    42,
+    100
+  ],
+  "num_clients": 10,
+  "rounds": 20,
+  "local_epochs": 2,
+  "batch_size": 32,
+  "lr": 0.02,
+  "dirichlet_alpha": 0.5,
+  "max_train_samples": 3000,
+  "trust_threshold": 0.55,
+  "datt_k": 1.5,
+  "datt_rho": 0.3,
+  "staleness_lambda": 0.3,
+  "byzantine_fraction": 0.3,
+  "dp_epsilon": 0.7,
+  "dp_delta": 1e-05,
+  "sync_quorum": 0.8,
+  "fixed_dp_noise": 0.004,
+  "sadp_noise": 0.008,
+  "datt_drift_penalty": 0.6,
+  "datt_anomaly_penalty": 0.5,
+  "datt_iqr_scale": 0.5
+}
