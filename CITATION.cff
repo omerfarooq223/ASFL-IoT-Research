@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark in your research, please cite it as below."
+authors:
+  - family-names: "Zulfiqar"
+    given-names: "Saliha"
+    affiliation: "University of Management and Technology"
+  - family-names: "Farooq"
+    given-names: "Muhammad Umar"
+    email: "momerfarooq223@gmail.com"
+    affiliation: "University of Management and Technology"
+  - family-names: "Hussain"
+    given-names: "Muhammad Zunnurain"
+    affiliation: "Bahria University"
+  - family-names: "Hasan"
+    given-names: "Muhammad Zulkifl"
+    affiliation: "University of Central Punjab"
+title: "ASFL-IoT: Risk-Coupled Adaptive Secure Federated Learning for Trust-Aware Internet-of-Things Systems"
+version: 1.0.0
+date-released: 2026-09-20
+conference:
+  name: "2026 IEEE International Conference on Emerging Trends in Science and Technology (ICES&T)"
+keywords:
+  - "federated learning"
+  - "internet of things"
+  - "byzantine robustness"
+  - "differential privacy"
+  - "trust management"
+  - "asynchronous FL"
+  - "non-IID data"
+license: MIT
