@@ -56,39 +56,41 @@ Existing solutions treat these stressors in isolation, often causing defenses to
 ## 🏗️ System Architecture & Round Lifecycle
 
 ```mermaid
-flowchart LR
-    subgraph Clients["Edge IoT Fleet"]
-        C["IoT Edge Clients<br/>Local Data & Sensors"]
+flowchart TD
+    subgraph Fleet["Edge IoT Fleet"]
+        C["IoT Edge Clients<br/>Local Sensor Data & Private Training"]
     end
 
-    subgraph Coordinator["ASFL-IoT Central Coordinator"]
+    subgraph Coordinator["ASFL-IoT Central Coordinator — Round Lifecycle"]
+        direction TB
         DATT["1. Risk-Coupled DATT<br/>Dynamic Trust Admission"]
         BRAE["2. BRAE Filtering<br/>MAD Norm + Cosine Screen"]
         ASYNC["3. AsyncFLP Aggregation<br/>Staleness Decay Weighting"]
         SADP["4. SADP Privacy<br/>Layer-Sensitive DP Noise"]
-        GLOBAL["Shared Representation<br/>Body Parameters"]
+        GLOBAL[("Global Representation<br/>Shared Body Parameters")]
+
+        DATT -->|Admitted Clients| BRAE
+        BRAE -->|Surviving Gradients| ASYNC
+        ASYNC -->|Aggregated Weights| SADP
+        SADP --> GLOBAL
+        BRAE -.->|Risk Feedback Loop| DATT
     end
 
-    subgraph LocalPFL["Client Personalization"]
-        PFL["5. PFL Heads<br/>Private Local Classifier"]
+    subgraph Personalization["Client Personalization"]
+        PFL["5. Local PFL Heads<br/>Private Local Classifiers"]
     end
 
-    C -->|"Upload Updates"| DATT
-    DATT -->|"Admitted Clients"| BRAE
-    BRAE -->|"Surviving Gradients"| ASYNC
-    ASYNC -->|"Aggregated Weights"| SADP
-    SADP --> GLOBAL
-    GLOBAL -->|"Global Representation"| PFL
-    PFL -->|"Private Local Head"| C
+    C -->|Upload Model Updates| DATT
+    GLOBAL -->|Broadcast Shared Body| PFL
+    PFL -->|Personalized Inference| C
 
-    BRAE -.->|"Risk Feedback"| DATT
-
-    style DATT fill:#e8f4f8,stroke:#1B4965,stroke-width:2px
-    style BRAE fill:#fbeee9,stroke:#E76F51,stroke-width:2px
-    style ASYNC fill:#eaf7f5,stroke:#2A9D8F,stroke-width:2px
-    style SADP fill:#fff3cd,stroke:#ffc107,stroke-width:2px
-    style GLOBAL fill:#e9ecef,stroke:#6c757d,stroke-width:2px
-    style PFL fill:#eaf7f5,stroke:#2A9D8F,stroke-width:2px
+    style C fill:#e8f4f8,stroke:#1B4965,stroke-width:2px,color:#1B4965
+    style DATT fill:#e8f4f8,stroke:#1B4965,stroke-width:2px,color:#1B4965
+    style BRAE fill:#fbeee9,stroke:#E76F51,stroke-width:2px,color:#9C2A10
+    style ASYNC fill:#eaf7f5,stroke:#2A9D8F,stroke-width:2px,color:#145A50
+    style SADP fill:#fff3cd,stroke:#E9C46A,stroke-width:2px,color:#7A5500
+    style GLOBAL fill:#e9ecef,stroke:#495057,stroke-width:2px,color:#212529
+    style PFL fill:#eaf7f5,stroke:#2A9D8F,stroke-width:2px,color:#145A50
 ```
 
 ### The 5 Core Modules
