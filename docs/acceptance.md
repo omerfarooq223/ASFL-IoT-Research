@@ -11,7 +11,7 @@
 
 ## Acceptance Notice
 
-The paper was formally accepted for presentation and publication by the ICES&T 2026 Program Committee. The full official acceptance notification is archived at [`IEEE_ICEST_2026_Acceptance_Notification.pdf`](./IEEE_ICEST_2026_Acceptance_Notification.pdf).
+The paper was formally accepted for presentation and publication by the ICES&T 2026 Program Committee.
 
 ## Review Highlights & Addressed Feedback
 

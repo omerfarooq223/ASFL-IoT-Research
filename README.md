@@ -165,11 +165,7 @@ All plots are reproducible via `scripts/generate_plots.py` and exported in both 
 
 ## 📁 Repository Structure
 
-<details>
-<summary><b>📂 Click to expand the full repository tree</b></summary>
-
 ```
-.
 ├── .github/
 │   ├── workflows/ci.yml         # GitHub Actions automated CI testing workflow
 │   ├── ISSUE_TEMPLATE/          # Standardized issue templates
@@ -202,13 +198,8 @@ All plots are reproducible via `scripts/generate_plots.py` and exported in both 
 │   ├── *.csv                    # Raw and summary CSV tables across all 5 seeds
 │   └── config.json              # Simulation configuration parameters
 │
-├── paper/                       # Conference paper LaTeX sources
-│   ├── paper.tex                # Accepted IEEE ICES&T 2026 camera-ready LaTeX source
-│   └── README.md                # Compilation instructions (Overleaf / TeX Live)
-│
 ├── docs/                        # Publication and conference acceptance records
-│   ├── acceptance.md            # IEEE ICES&T 2026 acceptance notice and review notes
-│   └── IEEE_ICEST_2026_Acceptance_Notification.pdf # Official acceptance notification letter
+│   └── acceptance.md            # IEEE ICES&T 2026 acceptance notice and review notes
 │
 ├── tests/                       # Automated test suite
 │   ├── test_models.py           # Model architectures and parameter manipulation tests
@@ -224,8 +215,6 @@ All plots are reproducible via `scripts/generate_plots.py` and exported in both 
 ├── pyproject.toml               # Modern standard packaging configuration
 └── requirements.txt             # Pinned Python package dependencies
 ```
-
-</details>
 
 ---
 
@@ -305,6 +294,8 @@ python scripts/generate_plots.py --results-dir results --fig-dir results/figures
 ---
 
 ## 📜 Paper & Citation
+
+> **Note:** The full paper is accepted for publication and will be formally indexed in the IEEE Xplore Digital Library (*Proceedings of the 2026 IEEE International Conference on Emerging Trends in Science and Technology*). For preprint or author-accepted manuscript requests, please reach out to the authors.
 
 If you find this work, codebase, or benchmark useful in your research, please cite:
 

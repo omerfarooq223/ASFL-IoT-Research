@@ -77,3 +77,6 @@ venv.bak/
 
 # Archives (unpacked results are tracked in results/)
 asfl_iot_results.zip
+
+# Paper sources (kept private / unpushed)
+paper/
