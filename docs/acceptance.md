@@ -1,8 +1,9 @@
 # Conference Acceptance & Publication Details
 
-**Conference:** 2026 IEEE International Conference on Emerging Trends in Science and Technology (ICES&T 2026)  
+**Conference:** 2nd IEEE International Conference on Emerging Trends in Engineering, Sciences and Technology (ICES&T 2026)  
+**Organizers:** Organized in collaboration with IEEE Bahawalpur Subsection  
 **Paper ID:** #21  
-**Title:** *ASFL-IoT: Risk-Coupled Adaptive Secure Federated Learning for Trust-Aware Internet-of-Things Systems*  
+**Title:** *ASFL-IoT: Adaptive Secure Federated Learning for Trust-Aware IoT*  
 **Authors:** Saliha Zulfiqar, Muhammad Umar Farooq, Muhammad Zunnurain Hussain, Muhammad Zulkifl Hasan  
 **Affiliations:** 
 - Department of Artificial Intelligence, University of Management and Technology (UMT), Lahore, Pakistan
@@ -11,7 +12,7 @@
 
 ## Acceptance Notice
 
-The paper was formally accepted for presentation and publication by the ICES&T 2026 Program Committee.
+The paper was formally accepted and presented at the 2nd IEEE ICES&T 2026. Official publication proceedings are currently pending in the IEEE Xplore Digital Library.
 
 ## Review Highlights & Addressed Feedback
 

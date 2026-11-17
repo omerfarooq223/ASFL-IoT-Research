@@ -14,11 +14,11 @@ authors:
   - family-names: "Hasan"
     given-names: "Muhammad Zulkifl"
     affiliation: "University of Central Punjab"
-title: "ASFL-IoT: Risk-Coupled Adaptive Secure Federated Learning for Trust-Aware Internet-of-Things Systems"
+title: "ASFL-IoT: Adaptive Secure Federated Learning for Trust-Aware IoT"
 version: 1.0.0
 date-released: 2026-09-20
 conference:
-  name: "2026 IEEE International Conference on Emerging Trends in Science and Technology (ICES&T)"
+  name: "2nd IEEE International Conference on Emerging Trends in Engineering, Sciences and Technology (ICES&T 2026)"
 keywords:
   - "federated learning"
   - "internet of things"

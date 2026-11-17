@@ -2,17 +2,18 @@
 
 # 🛡️ ASFL-IoT
 
-### Risk-Coupled Adaptive Secure Federated Learning<br/>for Trust-Aware Internet-of-Things Systems
+### Adaptive Secure Federated Learning for Trust-Aware IoT
 
-[![Conference](https://img.shields.io/badge/IEEE%20ICES%26T%202026-Accepted%20(Paper%20%2321)-1B4965?style=for-the-badge&logo=ieee)](docs/acceptance.md)
+[![Conference](https://img.shields.io/badge/2nd%20IEEE%20ICES%26T%202026-Accepted%20%26%20Presented%20(Paper%20%2321)-1B4965?style=for-the-badge&logo=ieee)](docs/acceptance.md)
 
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-2A9D8F?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen?style=flat-square&logo=githubactions&logoColor=white)](.github/workflows/ci.yml)
 
-**Official open-source repository** for the IEEE conference paper, accepted for the<br/>
-*2026 IEEE International Conference on Emerging Trends in Science and Technology (ICES&T 2026)*.
+**Official open-source repository** for the IEEE conference paper, accepted and presented at the<br/>
+*2nd IEEE International Conference on Emerging Trends in Engineering, Sciences and Technology (ICES&T 2026)*<br/>
+*(Organized in collaboration with IEEE Bahawalpur Subsection)*.
 
 [Overview](#-executive-summary) •
 [Architecture](#️-system-architecture--round-lifecycle) •
@@ -58,31 +59,31 @@ Existing solutions treat these stressors in isolation, often causing defenses to
 ```mermaid
 flowchart TD
     subgraph Fleet["Edge IoT Fleet"]
-        C["IoT Edge Clients<br/>Local Sensor Data & Private Training"]
+        C["IoT Edge Clients"]
     end
 
-    subgraph Coordinator["ASFL-IoT Central Coordinator — Round Lifecycle"]
+    subgraph Coordinator["ASFL-IoT Central Coordinator"]
         direction TB
-        DATT["1. Risk-Coupled DATT<br/>Dynamic Trust Admission"]
-        BRAE["2. BRAE Filtering<br/>MAD Norm + Cosine Screen"]
-        ASYNC["3. AsyncFLP Aggregation<br/>Staleness Decay Weighting"]
-        SADP["4. SADP Privacy<br/>Layer-Sensitive DP Noise"]
-        GLOBAL[("Global Representation<br/>Shared Body Parameters")]
+        DATT["1. DATT Admission"]
+        BRAE["2. BRAE Filtering"]
+        ASYNC["3. AsyncFLP Aggregation"]
+        SADP["4. SADP Privacy"]
+        GLOBAL[("Global Model Body")]
 
-        DATT -->|Admitted Clients| BRAE
-        BRAE -->|Surviving Gradients| ASYNC
-        ASYNC -->|Aggregated Weights| SADP
+        DATT -->|Admitted| BRAE
+        BRAE -->|Surviving| ASYNC
+        ASYNC -->|Aggregated| SADP
         SADP --> GLOBAL
-        BRAE -.->|Risk Feedback Loop| DATT
+        BRAE -.->|Risk Feedback| DATT
     end
 
     subgraph Personalization["Client Personalization"]
-        PFL["5. Local PFL Heads<br/>Private Local Classifiers"]
+        PFL["5. Local PFL Heads"]
     end
 
-    C -->|Upload Model Updates| DATT
-    GLOBAL -->|Broadcast Shared Body| PFL
-    PFL -->|Personalized Inference| C
+    C -->|Upload Updates| DATT
+    GLOBAL -->|Broadcast Body| PFL
+    PFL -->|Inference| C
 
     style C fill:#e8f4f8,stroke:#1B4965,stroke-width:2px,color:#1B4965
     style DATT fill:#e8f4f8,stroke:#1B4965,stroke-width:2px,color:#1B4965
@@ -297,18 +298,18 @@ python scripts/generate_plots.py --results-dir results --fig-dir results/figures
 
 ## 📜 Paper & Citation
 
-> **Note:** The full paper is accepted for publication and will be formally indexed in the IEEE Xplore Digital Library (*Proceedings of the 2026 IEEE International Conference on Emerging Trends in Science and Technology*). For preprint or author-accepted manuscript requests, please reach out to the authors.
+> **Note:** The paper was formally accepted and presented at the **2nd IEEE International Conference on Emerging Trends in Engineering, Sciences and Technology (ICES&T 2026)**, organized in collaboration with **IEEE Bahawalpur Subsection**. Publication proceedings are currently pending in the IEEE Xplore Digital Library. For preprint or author-accepted manuscript requests, please contact the authors.
 
 If you find this work, codebase, or benchmark useful in your research, please cite:
 
 ```bibtex
 @inproceedings{zulfiqar2026asfl,
-  title={{ASFL-IoT: Risk-Coupled Adaptive Secure Federated Learning for Trust-Aware Internet-of-Things Systems}},
+  title={{ASFL-IoT: Adaptive Secure Federated Learning for Trust-Aware IoT}},
   author={Zulfiqar, Saliha and Farooq, Muhammad Umar and Hussain, Muhammad Zunnurain and Hasan, Muhammad Zulkifl},
-  booktitle={Proceedings of the 2026 IEEE International Conference on Emerging Trends in Science and Technology (ICES\&T)},
+  booktitle={Proceedings of the 2nd IEEE International Conference on Emerging Trends in Engineering, Sciences and Technology (ICES\&T 2026)},
   year={2026},
   organization={IEEE},
-  note={Paper ID: 21}
+  note={Accepted and Presented; publication pending in IEEE Xplore. Paper ID: 21}
 }
 ```
 

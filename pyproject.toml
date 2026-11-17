@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "asfl-iot"
 version = "1.0.0"
-description = "ASFL-IoT: Risk-Coupled Adaptive Secure Federated Learning for Trust-Aware Internet-of-Things Systems (IEEE ICES&T 2026)"
+description = "ASFL-IoT: Adaptive Secure Federated Learning for Trust-Aware IoT (2nd IEEE ICES&T 2026)"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
